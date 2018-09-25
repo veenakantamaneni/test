@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" >
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+	<div class="header-nav">
+		<div class="container-fluid">
+			<nav class="navbar navbar-expand-md ">
+			  <a class="navbar-brand" href="#">
+			  	<img src="logo.png" height="40px">
+			  </a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+			    <ul class="navbar-nav">
+			      <li class="nav-item">
+			        <a class="nav-link" id="1" href="#">Pay With Visa</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" id="2"  href="#">Partner With Us</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" id="3" href="#">Run Your Business</a>
+			      </li> 
+			      <li class="nav-item">
+			        <a class="nav-link"  id="4" href="#">Travel With Visa</a>
+			      </li> 
+			      <li class="nav-item">
+			        <a class="nav-link" id="5"  href="#">Learn About Visa</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" id="6"  href="#"><i class="fa fa-search"></i></a>
+			      </li>   
+			      
+			    </ul>
+			  </div>  
+			</nav>
+			
+		</div>
+		
+		<i id="arrow"></i>
+
+	</div>
+	
+
+<style type="text/css">
+	.header-nav{
+		background-color: #192969;
+		padding:15px 0;
+		border-bottom: 5px solid #FEC812;
+		position: relative;
+		
+		}
+			
+	a{
+		color:#DCDFEA;
+		font-family: 'open-sans',sans-serif;
+		font-size: 18px;
+		
+		padding-left: 15px!important;
+		padding-right: 15px!important;
+		
+			  
+		}
+
+	a:hover{
+		color:#FEC812;
+	}
+
+	i{
+		color:#FEC812;
+		font-size: 25px;
+
+
+	}
+	.fa:hover{
+		color:#DCDFEA;
+	}
+	#collapsibleNavbar{
+		margin-left: 200px; 
+	}
+	li:nth-last-child(2){
+		padding-right: 12px;
+	}
+	li:last-child{
+
+		border-left:2px solid #4264AA;
+		padding-left:12px; 
+	}
+	.navbar-toggler-icon{
+		background-color:#DCDFEA ;
+	}
+
+.move{
+	position:absolute;
+		top:80px;
+		margin-left: 460px;
+	
+}
+
+
+</style>
+
+<script type="text/javascript">
+	
+		
+		
+$('.navbar-nav').on('click', 'a', function(event){
+	var ele=$('<i class="fas fa-caret-up"></i>');
+	var x = event.pageX;
+    var y = event.pageY;
+
+var id = $(this).offset().left;
+
+	$('body').append(ele);
+  var new_one= ele.css({
+  	'position':'absolute',
+  	'top':'80px',
+  	'left':460+'px' 	
+  });
+
+$(ele).animate({
+        
+        left: x - 36
+
+    }, 500);
+
+
+ 
+});
+	
+</script>
+</body>
+</html>
